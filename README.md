@@ -2,13 +2,9 @@
 The purpose of this project is to identify genetic variations, specifically Single Nucleotide Polymorphisms (SNPs) and insertions/deletions (indels), in Escherichia coli strains using whole genome sequencing (WGS) data. This analysis helps in understanding strain-specific mutations, evolutionary differences, and functional changes that may influence pathogenicity, drug resistance, or adaptation.
 
 By implementing a standardized bioinformatics pipeline using tools like BWA, SAMtools, GATK, and IGV, this project demonstrates the end-to-end process of:
-
 -Quality control of raw sequence reads
-
 -Reference-based genome alignment
-
 -Variant calling and filtering
-
 -Visualization and interpretation of variants
 
 This project can serve as a template or learning resource for bacterial genome variant analysis using short-read sequencing data.
@@ -30,17 +26,11 @@ conda activate ecoli_variant_env</pre>
 **TOOLS USED**
 
 -FastQC
-
 -Trimmomatic
-
 -BWA
-
 -SAMtools
-
 -GATK
-
--SnpEff or BCFtools annotate (optional)
-
+-SnpEff or BCFtools annotate
 -IGV
 
 
@@ -61,8 +51,8 @@ conda activate ecoli_variant_env</pre>
 
 
 **WORKFLOW**
-The overview of the workflow is-
 
+The overview of the workflow is-
 1. Quality check of raw reads using FastQC  
 2. Read trimming with Trimmomatic  
 3. Alignment to reference genome using BWA  
