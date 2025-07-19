@@ -17,11 +17,13 @@ This project can serve as a template or learning resource for bacterial genome v
 
  we can install all required tools using Conda:
  
-```conda create -n ecoli_variant_env \
+<pre>```bash
+ 
+ conda create -n ecoli_variant_env \
   fastqc trimmomatic bwa samtools gatk4 snpeff bcftools igv \
   -c bioconda -c conda-forge -y
 
-conda activate ecoli_variant_env```
+conda activate ecoli_variant_env```</pre>pre>
 
 **TOOLS USED**
 
