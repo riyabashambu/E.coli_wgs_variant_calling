@@ -61,7 +61,7 @@ The overview of the workflow is-
 6. Variant annotation using SnpEff  
 7. Visualization in IGV  
 
-**RAW DATA AND REFFERENCE GENOME**
+**STEP 1. RAW DATA AND REFFERENCE GENOME**
 
 Raw Sequencing Data
 
@@ -90,7 +90,7 @@ wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_AS
 gunzip GCF_000005845.2_ASM584v2_genomic.fna.gz
 mv GCF_000005845.2_ASM584v2_genomic.fna ecoli_reference.fasta </pre>
 
-**Step 1: Quality Control of Raw Reads**
+**STEP 2. QUALITY CONTROL OF RAW READS**
 Objective:
 To check the quality of sequencing reads to identify low-quality bases, adapter contamination, and any other issues before alignment.
 
@@ -116,7 +116,7 @@ Place output files into a dedicated directory:
 mkdir -p qc_reports
 fastqc SRR3191544_1.fastq.gz SRR3191544_2.fastq.gz -o qc_reports/ </pre>
 
-**Trimming Low-Quality Reads and Adapters**
+**STEP 3. TRIMMING LOW QUALITU READS AND ADAPTERS**
 
 Objective: Remove sequencing adapters and trim low-quality bases from raw reads to improve downstream alignment accuracy.
 
@@ -138,7 +138,7 @@ Output:
 -trimmed_R1_paired.fq.gz 
 -trimmed_R2_paired.fq.gz 
 
-**Aligning Reads to the Reference Genome**
+**STEP 4. ALIGNING READS TO THE REFERENCE GENOME**
 
 Objective: Map the sequencing reads to the *Escherichia coli* reference genome to determine their genomic positions.
 
@@ -158,7 +158,7 @@ bwa index ecoli_reference.fasta </pre>
 bwa mem ecoli_reference.fasta \
   trimmed_R1_paired.fq.gz trimmed_R2_paired.fq.gz > aligned.sam </pre>
 
-**SAM to BAM Conversion, Sorting, and Indexing**
+**STEP 5. SAM TO BAM CONVERSION, SORTING AND INDEXING**
 
 Objective: Prepare the alignment file for variant calling by converting it to a compressed binary format (BAM), sorting the reads, and creating an index.
 
@@ -183,7 +183,7 @@ aligned_sorted.bam — sorted BAM file
 
 aligned_sorted.bam.bai — BAM index file
 
-**Variant Calling**
+**STEP 6. Variant Calling**
 
 Objective: Identify SNPs and indels in the aligned *E. coli* genome using GATK's HaplotypeCaller.
 Tool: [GATK (Genome Analysis Toolkit)](https://gatk.broadinstitute.org/)
@@ -213,7 +213,7 @@ Since E. coli is haploid, set -ploidy 1.
 Output:
 raw_variants.vcf — list of called variants (SNPs and indels)
 
-**Variant Annotation**
+**STEP 7. Variant Annotation**
 
 Objective: Annotate the identified variants to determine their effect on genes and protein function.
 
@@ -270,10 +270,10 @@ What we Looked For:
 
 
 
-**Conclusion**:
+**CONCLUSION**:
 This visualization helps validate the bioinformatics pipeline by checking if variants are real (not artifacts) and well-supported by the data.
 
-**Key Learnings**:
+**KEY LEARNINGS**:
 - Understanding of tools like **BWA**, **GATK**, **SAMtools**, **SnpEff**, and **IGV**
 - Application of **variant calling techniques** to microbial genomics
 - Gained insights into how computational pipelines can uncover **biological meaning from raw sequencing data**
