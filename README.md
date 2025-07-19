@@ -23,7 +23,7 @@ This project can serve as a template or learning resource for bacterial genome v
   fastqc trimmomatic bwa samtools gatk4 snpeff bcftools igv \
   -c bioconda -c conda-forge -y
 
-conda activate ecoli_variant_env```</pre>
+conda activate ecoli_variant_env</pre>
 
 **TOOLS USED**
 
