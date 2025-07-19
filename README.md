@@ -65,11 +65,11 @@ The overview of the workflow is-
 
 Raw Sequencing Data
 
- Organism: *Escherichia coli* (strain K-12 substr. MG1655) 
- Source: European Nucleotide Archive (ENA) 
- Run Accession: [SRR3191544](https://www.ebi.ac.uk/ena/browser/view/SRR3191544) 
- Sequencing Platform: Illumina HiSeq  
- Read Type: Paired-end (2 × 150 bp) 
+ -Organism: *Escherichia coli* (strain K-12 substr. MG1655) 
+ -Source: European Nucleotide Archive (ENA) 
+ -Run Accession: [SRR3191544](https://www.ebi.ac.uk/ena/browser/view/SRR3191544) 
+ -Sequencing Platform: Illumina HiSeq  
+ -Read Type: Paired-end (2 × 150 bp) 
 
 <pre>bash
 # Read 1
@@ -80,10 +80,10 @@ wget https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR319/004/SRR3191544/SRR3191544_2.fas
 
 Reference Genome
 
-  Reference Strain: E. coli K-12 substrain MG1655 
-  Source: NCBI RefSeq
-  Assembly Accession: NC_000913.3
-  File: ecoli_reference.fasta
+  -Reference Strain: E. coli K-12 substrain MG1655 
+  -Source: NCBI RefSeq
+  -Assembly Accession: NC_000913.3
+  -File: ecoli_reference.fasta
 
 <pre>bash
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz
