@@ -13,3 +13,12 @@ By implementing a standardized bioinformatics pipeline using tools like BWA, SAM
 
 This project can serve as a template or learning resource for bacterial genome variant analysis using short-read sequencing data.
 
+ #Recommended Environment Setup
+You can install all required tools using Conda:
+'''conda create -n ecoli_variant_env \
+  fastqc trimmomatic bwa samtools gatk4 snpeff bcftools igv \
+  -c bioconda -c conda-forge -y
+
+conda activate ecoli_variant_env'''
+
+
