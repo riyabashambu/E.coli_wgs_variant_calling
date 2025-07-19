@@ -40,3 +40,19 @@ conda activate ecoli_variant_env</pre>
 -SnpEff or BCFtools annotate (optional)
 
 -IGV
+
+**FILE FORMT USED**
+
+| **Format** | **Extension**       | **Description**                                           |
+|------------|---------------------|-----------------------------------------------------------|
+| FASTQ      | `.fastq`, `.fastq.gz` | Raw sequencing reads (e.g., paired-end: R1 and R2)       |
+| FASTA      | `.fasta`, `.fa`     | Reference genome sequence                                 |
+| SAM        | `.sam`              | Alignment file from BWA (text format)                     |
+| BAM        | `.bam`              | Binary alignment file (compressed SAM)                    |
+| BAI        | `.bai`              | Index file for BAM (used for visualization in IGV)       |
+| VCF        | `.vcf`              | Variant Call Format – lists SNPs and indels               |
+| VCF.GZ     | `.vcf.gz`           | Compressed VCF file                                       |
+| GFF / GTF  | `.gff`, `.gtf`      | Genome annotation file (used for variant annotation)      |
+| HTML       | `.html`             | Quality control reports from FastQC                       |
+| TXT        | `.txt`              | Logs, notes, or summary output (optional)                 |
+
